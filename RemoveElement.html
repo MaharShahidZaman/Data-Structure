@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove element</title>
+</head>
+<body>
+    <script>
+        function setValue(){
+            const array = [1,4,6,7,5,10];
+        let position = document.getElementById('position').value
+        for(let i = 0; i < array.length-1; i++){
+            if(i >= position){
+                array[i] = array[i+1]
+            }
+        }
+        array.length = array.length-1
+        console.log(array)
+        }
+        
+    </script>
+    <input type="text" id="position">
+    <button onClick={setValue()}>set</button>
+    
+</body>
+</html>

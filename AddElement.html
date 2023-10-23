@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add element in Array</title>
+</head>
+
+<body>
+    <script>
+        function setValue() {
+            let array = [1, 3, 5, 6, 7, 10, 23];
+            let position = document.getElementById('position').value
+            let element = document.getElementById('element').value
+            element = parseInt(element)
+            for (let i = array.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    array[i + 1] = array[i]
+                }
+                if (i == position) {
+                    array[i] = element
+                }
+            }
+            console.log(array)
+        }
+
+    </script>
+    <input type="text" id="element">
+    <input type="text" id="position">
+    <button onClick={setValue()}>Set Value</button>
+
+</body>
+
+</html>

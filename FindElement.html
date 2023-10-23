@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Element</title>
+</head>
+<body>
+    <script>
+
+        function setValue(){
+            const array = [3, 5, 7, 10, 7,4,3];
+        const element = document.getElementById('element').value
+        const findingElement = [];
+
+        for(let i = 0; i <= array.length-1; i++){
+            if(array[i] == element){
+              findingElement.push(i)
+            }
+            
+        }
+        console.log(findingElement)
+
+        }
+        
+    </script>
+<input id="element" type="number" />
+<button onclick={setValue()}>submit</button> -->
+
+</body>
+</html>
